@@ -7,7 +7,9 @@
     margin:0;
     padding:0;
 }
-
+body{
+    background-color: black;
+}
 /*###########################   NAV      #######################################*/
 
 
@@ -19,3 +21,28 @@ ul.text-xl>button{
 ul.text-xl>button>span{
     margin-right: 1rem;
 }
+.my-transition {
+    transition: all 0.3s ease-in-out;
+}
+.slow-transition {
+    transition: all 0.5s ease-in-out;
+}
+.modal-transition{
+    transition: left 0.5s ease-in-out;
+}
+
+/* .slide-left{
+    animation:slidein ;
+    animation-duration: 0.5s;
+    animation-timing-function:  ease-in;
+}
+.slide-right{
+    animation:slideout ;
+    animation-duration: 0.5s;
+    animation-timing-function:  ease-in;
+}
+@keyframes slidein {
+    from{
+        transform:t()
+    }
+} */
