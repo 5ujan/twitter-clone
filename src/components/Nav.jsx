@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
-import data from "./data";
+import {data} from "./data";
 
 //Components
-import Header from "./Header"
-import ModalPhone from "./ModalPhone";
-import ModalTablet from "./ModalTablet";
+import Header from "./navComponents/Header"
+import ModalPhone from "./navComponents/ModalPhone";
+import ModalTablet from "./navComponents/ModalTablet";
+import BottomNav from "./navComponents/BottomNav";
 
 
 const Nav = () => {
@@ -14,7 +15,7 @@ const Nav = () => {
   const [showMisc, setMisc] = useState(false);
 
   const miscRef= useRef(null)
-
+  console.log(data);
   return (
     <div className=" max-w-xlg ">
       <Header  props={{active, setActive, modal, setModal}}></Header>
@@ -22,6 +23,7 @@ const Nav = () => {
         props= {{active, setActive, setModal,  modal, showSetting, setShowSetting}}
       ></ModalPhone > 
       <ModalTablet props={{ miscRef, showMisc,  setMisc, showSetting, setShowSetting }}></ModalTablet>
+    
     </div>
   );
 };
